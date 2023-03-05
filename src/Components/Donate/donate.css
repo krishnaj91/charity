@@ -1,0 +1,70 @@
+.container-donate{
+    display: flex;
+    background-image: url("https://donatenow.wfp.org/cdn.iraiser.eu/CMtktXtXB9PisWSC3vcC/Q==/default/origin/genericbackground.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px 0;
+}
+.left-donate{
+    width: 50%;
+    border: 2px solid red;
+
+}
+.right-donate{
+    width: 50%;
+    border: 2px solid red;
+padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.donate{
+    /* border: 2px solid green; */
+    background-color: rgb(198, 224, 247);
+    width: 70%;
+    height: 100%;
+}
+
+.donate-imgs{
+    height: 300px;
+    background-size: cover;
+    width: 100%;
+}
+
+.donate-styled-text{
+    background-color: aqua;
+    margin: 20px;
+    padding: 5px;
+}
+
+.donate-payment{
+   padding: 20px;
+}
+
+/* .donate-payment h2{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+} */
+
+.field{
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.err{
+    color: red;
+    padding-bottom: 10px;
+}
+
+.donate-info{
+    padding: 20px;
+    color: gray;
+}
+
+.donate-end{
+    background-color: #0b77c2;
+    padding: 20px;
+    color: antiquewhite;
+}

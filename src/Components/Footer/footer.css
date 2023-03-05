@@ -1,0 +1,85 @@
+.container-footer {
+  background-color: #01091c;
+  background-image: url("https://www.designrush.com/topbest/images/svg/footer-logo.svg");
+  background-repeat: no-repeat;
+  line-height: 35px;
+  color: white;
+}
+
+.footer-body{
+    display: flex;
+    padding: 50px;
+    padding-bottom: 0;
+    justify-content: space-around;
+}
+.social {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2af4ff;
+}
+.social h3 {
+  margin: 15px 0;
+}
+
+.social img {
+  height: 100px;
+  width: 150px;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+}
+
+.icons {
+  display: flex;
+  color: #00abf3;
+}
+
+.icons span {
+  margin-right: 20px;
+}
+
+.icons span:hover {
+  cursor: pointer;
+  transform: scale(1.7);
+}
+
+.footer-about h2 {
+  color: #2af4ff;
+}
+.footer-about ul {
+  list-style: none;
+}
+.footer-about li {
+  color: aliceblue;
+}
+.footer-about li:hover {
+  color: #00abf3;
+  cursor: pointer;
+}
+
+.footer-info h2 {
+  color: #2af4ff;
+}
+.footer-info span {
+  color: #6665a8;
+}
+.footer-info ul {
+  list-style: none;
+}
+.footer-info li {
+  color: aliceblue;
+}
+.footer-info li:hover {
+  color: #00abf3;
+  cursor: pointer;
+}
+
+.copyright{
+    padding: 20px;
+    color: grey;
+    padding-bottom: 0;
+}

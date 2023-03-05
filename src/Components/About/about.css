@@ -1,0 +1,16 @@
+.container-about{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-about{
+    border: 2px red solid;
+    height: 50vh;
+    width: 20%;
+    /* margin: 10px; */
+}
+
+.img-about{
+    height: 150px;
+    width: 100%;
+}
