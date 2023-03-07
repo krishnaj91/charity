@@ -4,13 +4,31 @@
 }
 
 .card-about{
-    border: 2px red solid;
+    border: 2px wheat solid;
     height: 50vh;
+    background-color: aliceblue;
     width: 20%;
-    /* margin: 10px; */
+    margin: 50px 0;
+}
+
+.card-about:hover{
+    border: 2px black solid;
 }
 
 .img-about{
     height: 150px;
     width: 100%;
+}
+
+.card-title{
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.card-para{
+    color: gray;
+    font-size: 15px;
+    padding: 10px;
 }

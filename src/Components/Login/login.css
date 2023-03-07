@@ -1,0 +1,69 @@
+.body-login{
+    display: flex;
+}
+
+.left-login{
+    width: 50%;
+    display: flex;
+    /* height: 60vh; */
+    justify-content: center;
+    align-items: center;
+}
+
+.user-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 100px;
+    margin: 50px 0;
+    border: 2px solid whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.icon{
+    background-color: aliceblue;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(57, 57, 221);
+    border-radius: 50%;
+    border: 2px solid wheat;
+}
+
+.inpt{
+   border: 2px solid rgb(241, 215, 164);
+   width: 100%;
+   height: 40px;
+   margin-bottom: 20px;
+   background-color: transparent;
+   padding:5px 15px ;
+   font-size: large;
+   color: rgb(6, 62, 247);
+}
+
+.line{
+    border-left:  2px #050d0e solid;
+}
+
+.right-login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.admin-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 100px;
+    border: 2px solid whitesmoke;
+    padding: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}

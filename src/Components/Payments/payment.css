@@ -1,0 +1,202 @@
+.payment{
+    /* background-color: rgb(233, 230, 230); */
+    padding: 30px;
+    display: flex;
+}
+
+.payment-options{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.payment-options ul{
+    list-style: none;
+    width: 80%;
+}
+
+.payment-options li{
+    background-color:#b8b8b8;
+    border: 2px solid grey;
+    width: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upi-logo{
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    margin-left: 10px;
+}
+
+.view-payment{
+    width: 50%;
+    /* border: 2px solid red; */
+    /* background-color: rgb(211, 208, 208); */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.selected{
+    /* border: 2px solid green; */
+    width: 70%;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.selected ul{
+   list-style: none;
+}
+
+.selected-logo{
+    height: 50px;
+    width: 50px;
+}
+/* .selected-upi ul{
+    list-style: none;
+}
+
+.de{
+    display: flex;
+    align-items: center;
+}
+.selected-upi li{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border: 2px solid black;
+    align-items: center;
+    background-color: beige;
+} */
+/* .upi{
+    background-color:    #b8b8b8;
+    margin: 20px 0;
+}
+
+.card{
+    background-color: aliceblue;
+    margin: 20px 0;
+}
+
+.net-banking{
+    background-color: aliceblue;
+    margin: 20px 0;
+}
+
+.wallets{
+    background-color: aliceblue;
+    margin: 20px 0;
+}
+
+.pay-later{
+    background-color: aliceblue;
+    margin: 20px 0;
+} */
+
+/* ul{
+    list-style: none;
+} */
+.selected-inactive{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(196, 190, 190);
+    padding: 0 10px;
+    max-height: 100%;
+    border: 1px solid whitesmoke;
+}
+
+.selected-center{
+    display: flex;
+    align-items: center;
+}
+
+
+.selected-active{
+    background-color: rgb(224, 214, 214);
+}
+
+.selected-active-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+.selected-active-extra{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.selected-active-input{
+    width:50%;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.cc-card{
+    background-image: url('/src/assets/bg.avif');
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    background-size: cover;
+    color: aliceblue;
+}
+
+.cc-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.cc-top img{
+    height: 30px;
+    width: 30px;
+}
+
+.cc-bank{
+    display: flex;
+    align-items: center;
+}
+
+.cc-middle{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid; */
+}
+
+.cc-middle img{
+    height: 50px;
+    width: 50px;
+}
+
+.cc-end{
+    /* border: 1px solid; */
+    text-align: center;
+}
+
+.cc-end-detail{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cc-end-detail img{
+    /* height: 50px; */
+    width: 50px;
+}

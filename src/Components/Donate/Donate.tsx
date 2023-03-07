@@ -2,85 +2,112 @@ import React, { useState } from "react";
 import "./donate.css";
 import Demo from "../../assets/bg.jpg";
 import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const Donate = () => {
-  const [form,SetForm] = useState({
-    name:'',
-    email:'',
-    mobile:'',
-    amount:''
-  })
+  const [option,setOption] = useState('')
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    amount: "",
+  });
 
-  const [formError,SetFormError] = useState({
-    name:'',
-    email:'',
-    mobile:'',
-    amount:''
-  })
+  const [formError, setFormError] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    amount: "",
+  });
 
-  const handleChange = (name:any,value:any)=>{
-    SetForm((preValue:any)=>({...preValue,[name]:value}))
-    SetFormError((preValue:any)=>({...preValue,[name]:''}))
-  }
+  const navigate = useNavigate();
 
-  const Validate = ()=>{
-    const tempObj = {...formError}
-    if(form.name===''){
-      tempObj.name="Please enter your name"
+  const handleChange = (name: any, value: any) => {
+    setForm((preValue: any) => ({ ...preValue, [name]: value }));
+    setFormError((preValue: any) => ({ ...preValue, [name]: "" }));
+  };
+
+  const Validate = () => {
+    const tempObj = { ...formError };
+    if (form.name === "") {
+      tempObj.name = "Please enter your name";
     }
-    if(form.email===''){
-      tempObj.email='Please enter your email'
+    if (form.email === "") {
+      tempObj.email = "Please enter your email";
     }
-    if(form.mobile===''){
-      tempObj.mobile='Please enter your mobile number'
+    if (form.mobile === "") {
+      tempObj.mobile = "Please enter your mobile number";
     }
-    if(form.amount===''){
-      tempObj.amount='Please enter a amount'
+    if (form.amount === "") {
+      tempObj.amount = "Please enter a amount";
     }
-    SetFormError(tempObj)
-  }
-  const handleSubmit =()=>{
-    Validate()
-  }
+    setFormError(tempObj);
+  };
+  const handleSubmit = () => {
+    Validate();
+    if(form.amount){
+      navigate('/payment')
+    }
+  };
   return (
     <div className="container-donate">
       <div className="left-donate">
-        <h1>
-          Every donation provides nutritious food for hungry children and
-          families.
-        </h1>
-        <p>
-          When you donate to the World Food Programme, your generosity is
-          immediately put to work helping build a world with zero hunger. You
-          can help save lives during emergencies or give children nutritious
-          meals in school.
-        </p>
-        <p>We can’t do any of this without your support.</p>
-        <p>Please donate now.</p>
-        <h2>
-          For large philanthropic gifts,please contact the High Value Donor
-          Programme Lead.
-        </h2>
+        <div className="info">
+          <h1>
+            Every donation provides help for childrens
+          </h1>
+          <ul>
+            <li>Give the gift of hope to a child in need.</li>
+            <li>Every child deserves a bright future.</li>
+            <li>Your donation can change a child&apos;s life.</li>
+            <li>Help us make a difference in the lives of children.</li>
+            <li>Together, we can create a better world for children.</li>
+            <li>Your generosity can provide a child with a better tomorrow.</li>
+            <li>Invest in children&apos;s futures by donating today.</li>
+            <li>Empower children to reach their full potential.</li>
+            <li>Make a lasting impact on a child&apos;s life.</li>
+            <li>Be a hero for children in need. Donate now.</li>
+          </ul>
+          <p>We can’t do any of this without your support.</p>
+          <p>Please donate now.</p>
+          <h2>
+            For large philanthropic gifts,
+            <u>please contact the High Value Donor Programme Lead</u>.
+          </h2>
+        </div>
       </div>
       <div className="right-donate">
         <div className="donate">
           <div>
-            <h1>You are about to Donate</h1>
+            <h1 className="donate-tittle">You are about to Donate</h1>
+            <div className="option">
+              <div>
+                <input type='radio' name="payment" onClick={()=>setOption('one-time')}/><span>One-time</span>
+              </div>
+              <div>
+                <input type='radio' name="payment" onClick={()=>setOption('monthly')}/><span>Monthly</span>
+              </div>
+            </div>
           </div>
           <div>
-            <img className="donate-imgs" src={Demo} />
+            {!option && <img className="donate-imgs" src={Demo} />}
+            {option==='one-time' && <img className="donate-imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY4j3t9KA75p7e9Up0dczLSk5QdkZq3ls7uA&usqp=CAU" />}
+            {option==='monthly' && <img className="donate-imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5gSNI-UZr4nqf_fkjacQE4xg9bULnPxjyiQ&usqp=CAU" />}
           </div>
           <div className="donate-styled-text">
             <h3>enough to provide food for two people each month</h3>
           </div>
           <hr />
           <div className="donate-payment">
-            <h2>YOUR CONTACT DETAILS</h2>
+            <h2 className="donate-tittle">YOUR CONTACT DETAILS</h2>
             <div>
               <h2>Name:</h2>
               <TextField
                 value={form.name}
-                onChange={(e:any)=>{handleChange('name',e.target.value)}}
+                onChange={(e: any) => {
+                  handleChange("name", e.target.value);
+                }}
                 className="field"
                 placeholder="Name"
                 variant="outlined"
@@ -89,7 +116,9 @@ const Donate = () => {
               <h2>Email:</h2>
               <TextField
                 value={form.email}
-                onChange={(e:any)=>{handleChange('email',e.target.value)}}
+                onChange={(e: any) => {
+                  handleChange("email", e.target.value);
+                }}
                 className="field"
                 placeholder="Email"
                 variant="outlined"
@@ -98,22 +127,30 @@ const Donate = () => {
               <h2>Mobile number:</h2>
               <TextField
                 value={form.mobile}
-                onChange={(e:any)=>{handleChange('mobile',e.target.value)}}
+                onChange={(e: any) => {
+                  handleChange("mobile", e.target.value);
+                }}
                 className="field"
                 placeholder="Mobile Number"
                 variant="outlined"
+                type="number"
               />
               <p className="err">{formError.mobile}</p>
               <h2>Amount:</h2>
+              {/* {!option && <div></div>}
+              {option==='one-time' && <div><p>1000</p><p>1500</p><p></p>2000</div>}
+              {option==='monthly' && <div><p>200</p><p>400</p><p></p>600</div>} */}
               <TextField
                 value={form.amount}
-                onChange={(e:any)=>{handleChange('amount',e.target.value)}}
+                onChange={(e: any) => {
+                  handleChange("amount", e.target.value);
+                }}
                 className="field"
                 placeholder="Amount"
                 variant="outlined"
               />
               <p className="err">{formError.amount}</p>
-              <button onClick={handleSubmit}>Pay</button>
+              <Button variant="contained" onClick={handleSubmit}>Pay</Button>
             </div>
           </div>
           <div className="donate-info">

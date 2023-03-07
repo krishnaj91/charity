@@ -1,0 +1,8 @@
+.admin-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    background-color: #d8c5c5;
+    height: 50px;
+}

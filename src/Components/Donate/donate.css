@@ -8,19 +8,61 @@
 }
 .left-donate{
     width: 50%;
-    border: 2px solid red;
+}
 
+.info{
+   margin: 50px;
+   border: 2px solid red;
+   background-color: black;
+   padding: 20px;
+   color: red;
+}
+
+.info h1{
+    color: antiquewhite;
+    padding-bottom: 20px;
+}
+
+.info p{
+    padding-bottom: 10px;
+    color: antiquewhite;
+}
+
+.info ul{
+    color: aliceblue;
+    padding-left: 10px;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.info h2{
+    color: azure;
 }
 .right-donate{
     width: 50%;
-    border: 2px solid red;
-padding-bottom: 0;
+    padding-bottom: 0;
     display: flex;
     justify-content: center;
 }
 
+.donate-tittle{
+    margin: 20px;
+    text-align: center;
+}
+
+.option{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.option span{
+   padding-left: 10px;
+   font-size: 20px;
+}
+
+
 .donate{
-    /* border: 2px solid green; */
     background-color: rgb(198, 224, 247);
     width: 70%;
     height: 100%;
@@ -41,12 +83,6 @@ padding-bottom: 0;
 .donate-payment{
    padding: 20px;
 }
-
-/* .donate-payment h2{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-} */
 
 .field{
     width: 100%;

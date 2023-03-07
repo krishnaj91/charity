@@ -1,6 +1,7 @@
 .container-nav{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .nav{
     display: flex;
@@ -10,7 +11,7 @@
 }
 
 .left{
-width: 50%;
+width: 40%;
 }
 
 .left img{
@@ -18,7 +19,7 @@ width: 50%;
     width: 120px;
 }
 
-.right{
+.middle{
 display: flex;
 width: 40%;
 justify-content: space-between;
@@ -29,9 +30,28 @@ list-style: none;
     text-decoration: none;
     font-size: 20px;
     color: black;
-
 }
 
 .items:hover{
+    color: grey;
+}
+
+.items-active{
+    text-decoration: underline;
+    text-decoration-color: pink;
+    text-underline-offset: 10px;
+    font-size: 20px;
     color: red;
+}
+
+.right{
+    display: flex;
+    justify-content: right;
+    width: 20%;
+}
+
+.admin{
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
 }

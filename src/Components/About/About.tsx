@@ -11,7 +11,8 @@ const About = () => {
           <img src={Card} className='img-about'/>
         </div>
         <div>
-          <h1>CHILDREN EDUCATION</h1>
+          <h1 className='card-title'>CHILDREN <span>EDUCATION</span></h1>
+          <p className='card-para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente amet quo cupiditate animi quibusdam natus mollitia, est minus quam molestias.</p>
         </div>
       </div>
 
@@ -20,7 +21,8 @@ const About = () => {
           <img src={Card} className='img-about'/>
         </div>
         <div>
-          <h1>CHILDREN HEALTH</h1>
+          <h1 className='card-title'>CHILDREN HEALTH</h1>
+          <p className='card-para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente amet quo cupiditate animi quibusdam natus mollitia, est minus quam molestias.</p>
         </div>
       </div>
       
@@ -29,7 +31,8 @@ const About = () => {
           <img src={Card} className='img-about'/>
         </div>
         <div>
-          <h1>CHILDREN WEALTH</h1>
+          <h1 className='card-title'>CHILDREN WEALTH</h1>
+          <p className='card-para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente amet quo cupiditate animi quibusdam natus mollitia, est minus quam molestias.</p>
         </div>
       </div>
 
@@ -38,7 +41,8 @@ const About = () => {
           <img src={Card} className='img-about'/>
         </div>
         <div>
-          <h1>CHILDREN WELFARE</h1>
+          <h1 className='card-title'>CHILDREN WELFARE</h1>
+          <p className='card-para'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente amet quo cupiditate animi quibusdam natus mollitia, est minus quam molestias.</p>
         </div>
       </div>
     </div>
