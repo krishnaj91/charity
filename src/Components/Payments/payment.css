@@ -121,6 +121,7 @@
 
 .selected-active{
     background-color: rgb(224, 214, 214);
+    border-left: 5px solid green;
 }
 
 .selected-active-space{
@@ -140,17 +141,24 @@
     padding: 15px 0;
 }
 
+.selected-active-extra Button{
+    margin-top: 20px;
+}
+
 .selected-active-input{
     width:50%;
     height: 30px;
     padding: 5px;
-    margin-bottom: 20px;
+}
+
+.err{
+    color: red;
 }
 
 .cc-card{
     background-image: url('/src/assets/bg.avif');
     padding: 20px;
-    width: 300px;
+    width: 75%;
     border-radius: 20px;
     background-size: cover;
     color: aliceblue;

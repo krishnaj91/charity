@@ -29,15 +29,31 @@ const Donate = () => {
   };
 
   const Validate = () => {
+    const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
     const tempObj = { ...formError };
     if (form.name === "") {
       tempObj.name = "Please enter your name";
     }
+    else if(form.name.length<=2){
+      tempObj.name = "Invalid name";
+    }else{
+      tempObj.name = "";
+    }
+
     if (form.email === "") {
       tempObj.email = "Please enter your email";
     }
+    else if (!emailRegx.test(form.email)) {
+      tempObj.email = "Invalid Email address";
+    }else{
+      tempObj.email = "";
+    }
+
     if (form.mobile === "") {
       tempObj.mobile = "Please enter your mobile number";
+    }
+    else if(form.mobile.length<10){
+      tempObj.mobile = "Invalid mobile number";
     }
     if (form.amount === "") {
       tempObj.amount = "Please enter a amount";
@@ -48,6 +64,7 @@ const Donate = () => {
     Validate();
     if(form.amount){
       navigate('/payment')
+      localStorage.setItem('amount',form.amount)
     }
   };
   return (
@@ -106,7 +123,7 @@ const Donate = () => {
               <TextField
                 value={form.name}
                 onChange={(e: any) => {
-                  handleChange("name", e.target.value);
+                  handleChange("name", e.target.value.toString().slice(0, 15).replace(/[^a-z]/gi,''));
                 }}
                 className="field"
                 placeholder="Name"
@@ -128,8 +145,9 @@ const Donate = () => {
               <TextField
                 value={form.mobile}
                 onChange={(e: any) => {
-                  handleChange("mobile", e.target.value);
+                  handleChange("mobile", e.target.value.toString().slice(0, 10));
                 }}
+                onWheel={(e:any) => e.target.blur()}
                 className="field"
                 placeholder="Mobile Number"
                 variant="outlined"
@@ -143,8 +161,10 @@ const Donate = () => {
               <TextField
                 value={form.amount}
                 onChange={(e: any) => {
-                  handleChange("amount", e.target.value);
+                  handleChange("amount", e.target.value.toString().slice(0, 6));
                 }}
+                onWheel={(e:any) => e.target.blur()}
+                type='number'
                 className="field"
                 placeholder="Amount"
                 variant="outlined"

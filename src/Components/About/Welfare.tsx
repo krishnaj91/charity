@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
+import "./styles.css";
 
-const Contact = () => {
+const Welfare = () => {
   return (
     <div>
       <br />
@@ -16,7 +17,7 @@ const Contact = () => {
       <br />
       <br />
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Welfare;

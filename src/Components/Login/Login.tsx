@@ -50,8 +50,8 @@ const Login = () => {
             <div className='admin-login'>
                 <span className='icon'><AdminPanelSettingsIcon fontSize='large'/></span>
                 <h1>Admin Login</h1>
-                <input className='inpt' placeholder='username'/>
-                <input className='inpt' placeholder='password'/>
+                <input className='inpt' type='text' placeholder='username' value='Admin@123'/>
+                <input className='inpt' type='password' placeholder='password'value='admin123' />
                 <Button variant='contained' onClick={()=>{navigate('/admin'),sessionStorage.setItem('login','admin'),sessionStorage.setItem('path','admin')}}>login</Button>
             </div>
         </div>
