@@ -32,3 +32,91 @@
     font-size: 15px;
     padding: 10px;
 }
+
+
+.volunteer{  
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.volunteer-top{
+    display: flex;
+    width: 80%;
+    margin: 20px;
+}
+
+.volunteer-left{
+    background-color: #12284c;
+    color: aliceblue;
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volunteer-right{
+    background-color: white;
+    width: 70%;
+    color: gray;
+    font-size: 20px;
+    padding: 90px 50px;
+}
+
+.volunteer-title{
+    background-color: #12284c;
+    text-align: center;
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.volunteer-about{
+    background-color: aliceblue;
+    padding: 30px 10%;
+    margin-bottom: 50px;
+}
+
+.volunteer-cards{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    justify-content: space-evenly;
+}
+
+.volunteer-card{
+   width: 30%;
+    color: #12284c;
+    margin: 50px 0;
+}
+
+.volunteer-card h1{
+    height: 20%;
+}
+.volunteer-card img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.volunteer-card button{
+    border:#12284c 2px solid;
+    background-color: transparent;
+    color: #12284c;
+    font-weight: 600;
+    padding: 10px;
+    /* height: 30px; */
+    width: 30%;
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.volunteer-card button:hover{
+    background-color: #12284c;
+    color: white;
+}
+
+
+/* background: #234987ba; */

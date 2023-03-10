@@ -4,69 +4,71 @@ import Demo from "../../assets/bg.jpg";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import Form from "../Form/Form";
 
 const Donate = () => {
   const [option,setOption] = useState('')
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    amount: "",
-  });
+  // const [form, setForm] = useState({
+  //   name: "",
+  //   email: "",
+  //   mobile: "",
+  //   amount: "",
+  // });
 
-  const [formError, setFormError] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    amount: "",
-  });
+  // const [formError, setFormError] = useState({
+  //   name: "",
+  //   email: "",
+  //   mobile: "",
+  //   amount: "",
+  // });
 
   const navigate = useNavigate();
 
-  const handleChange = (name: any, value: any) => {
-    setForm((preValue: any) => ({ ...preValue, [name]: value }));
-    setFormError((preValue: any) => ({ ...preValue, [name]: "" }));
-  };
+  // const handleChange = (name: any, value: any) => {
+  //   setForm((preValue: any) => ({ ...preValue, [name]: value }));
+  //   setFormError((preValue: any) => ({ ...preValue, [name]: "" }));
+  // };
 
-  const Validate = () => {
-    const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-    const tempObj = { ...formError };
-    if (form.name === "") {
-      tempObj.name = "Please enter your name";
-    }
-    else if(form.name.length<=2){
-      tempObj.name = "Invalid name";
-    }else{
-      tempObj.name = "";
-    }
+  // const Validate = () => {
+  //   const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+  //   const tempObj = { ...formError };
+  //   if (form.name === "") {
+  //     tempObj.name = "Please enter your name";
+  //   }
+  //   else if(form.name.length<=2){
+  //     tempObj.name = "Invalid name";
+  //   }else{
+  //     tempObj.name = "";
+  //   }
 
-    if (form.email === "") {
-      tempObj.email = "Please enter your email";
-    }
-    else if (!emailRegx.test(form.email)) {
-      tempObj.email = "Invalid Email address";
-    }else{
-      tempObj.email = "";
-    }
+  //   if (form.email === "") {
+  //     tempObj.email = "Please enter your email";
+  //   }
+  //   else if (!emailRegx.test(form.email)) {
+  //     tempObj.email = "Invalid Email address";
+  //   }else{
+  //     tempObj.email = "";
+  //   }
 
-    if (form.mobile === "") {
-      tempObj.mobile = "Please enter your mobile number";
-    }
-    else if(form.mobile.length<10){
-      tempObj.mobile = "Invalid mobile number";
-    }
-    if (form.amount === "") {
-      tempObj.amount = "Please enter a amount";
-    }
-    setFormError(tempObj);
-  };
-  const handleSubmit = () => {
-    Validate();
-    if(form.amount){
-      navigate('/payment')
-      localStorage.setItem('amount',form.amount)
-    }
-  };
+  //   if (form.mobile === "") {
+  //     tempObj.mobile = "Please enter your mobile number";
+  //   }
+  //   else if(form.mobile.length<10){
+  //     tempObj.mobile = "Invalid mobile number";
+  //   }
+  //   if (form.amount === "") {
+  //     tempObj.amount = "Please enter a amount";
+  //   }
+  //   setFormError(tempObj);
+  // };
+
+  // const handleSubmit = () => {
+  //   Validate();
+  //   if(form.amount){
+  //     navigate('/payment')
+  //     localStorage.setItem('amount',form.amount)
+  //   }
+  // };
   return (
     <div className="container-donate">
       <div className="left-donate">
@@ -118,7 +120,7 @@ const Donate = () => {
           <hr />
           <div className="donate-payment">
             <h2 className="donate-tittle">YOUR CONTACT DETAILS</h2>
-            <div>
+            {/* <div>
               <h2>Name:</h2>
               <TextField
                 value={form.name}
@@ -155,9 +157,6 @@ const Donate = () => {
               />
               <p className="err">{formError.mobile}</p>
               <h2>Amount:</h2>
-              {/* {!option && <div></div>}
-              {option==='one-time' && <div><p>1000</p><p>1500</p><p></p>2000</div>}
-              {option==='monthly' && <div><p>200</p><p>400</p><p></p>600</div>} */}
               <TextField
                 value={form.amount}
                 onChange={(e: any) => {
@@ -171,7 +170,8 @@ const Donate = () => {
               />
               <p className="err">{formError.amount}</p>
               <Button variant="contained" onClick={handleSubmit}>Pay</Button>
-            </div>
+            </div> */}
+            <Form/>
           </div>
           <div className="donate-info">
             <p>

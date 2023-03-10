@@ -11,13 +11,58 @@ const Form = () => {
     amount: "",
   });
 
+  const [formError, setFormError] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    amount: "",
+  });
+
   const handleChange = (name: any, value: any) => {
     setForm((preValue: any) => ({ ...preValue, [name]: value }));
+    setFormError((preValue)=>({...preValue,[name]:''}))
+  };
+
+  const Validate = () => {
+    const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+    const tempObj = { ...formError };
+    if (form.name === "") {
+      tempObj.name = "Please enter your Name";
+    }
+    else if(form.name.length<=2){
+      tempObj.name = "Invalid Name";
+    }else{
+      tempObj.name = "";
+    }
+
+    if (form.email === "") {
+      tempObj.email = "Please enter your Email";
+    }
+    else if (!emailRegx.test(form.email)) {
+      tempObj.email = "Invalid Email address";
+    }else{
+      tempObj.email = "";
+    }
+
+    if (form.mobile === "") {
+      tempObj.mobile = "Please enter your Mobile Number";
+    }
+    else if(form.mobile.length<10){
+      tempObj.mobile = "Invalid Mobile Number";
+    }
+    if (form.amount === "") {
+      tempObj.amount = "Please enter Amount";
+    }
+    setFormError(tempObj);
   };
 
   const handleSubmit = () => {
-      navigate('/payment')
-      localStorage.setItem('amount',form.amount)
+      Validate();
+      const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+      if(form.name.length > 2 && emailRegx.test(form.email) && form.mobile.length >= 10 && form.amount){
+        navigate('/payment')
+        localStorage.setItem('amount',form.amount)
+      }
   };
 
   return (
@@ -32,6 +77,7 @@ const Form = () => {
       placeholder="Name"
       variant="outlined"
     />
+    <p className="err">{formError.name}</p>
     <h2>Email:</h2>
     <TextField
       value={form.email}
@@ -42,6 +88,7 @@ const Form = () => {
       placeholder="Email"
       variant="outlined"
     />
+    <p className="err">{formError.email}</p>
     <h2>Mobile number:</h2>
     <TextField
       value={form.mobile}
@@ -54,6 +101,7 @@ const Form = () => {
       variant="outlined"
       type="number"
     />
+    <p className="err">{formError.mobile}</p>
     <h2>Amount:</h2>
     <TextField
       value={form.amount}
@@ -66,7 +114,10 @@ const Form = () => {
       placeholder="Amount"
       variant="outlined"
     />
-    <Button variant="contained" onClick={handleSubmit}>Pay</Button>
+    <p className="err">{formError.amount}</p>
+    <center>
+      <Button variant="contained" onClick={handleSubmit}>Pay</Button>
+    </center>
   </div>
   )
 }
