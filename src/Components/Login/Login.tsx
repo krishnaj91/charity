@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
@@ -39,10 +39,11 @@ const Login = () => {
         <div className='left-login'>
             <div className='user-login'>
                 <span className='icon'><SupervisorAccountIcon fontSize='large'/></span>
-                <h1>Member Login</h1>
+                <h1>Volunteer Login</h1>
                 <input className='inpt' placeholder='username'/>
                 <input className='inpt' placeholder='password'/>
-                <Button variant='contained' disabled onClick={handleLoginOpen}>login</Button>
+                <Button variant='contained'>login</Button>
+                <span>New user click here to <Link to={'/register'}>Register</Link></span>
             </div>
         </div>
         <div className='line'></div>
@@ -58,7 +59,7 @@ const Login = () => {
     </div>
 
     
-    <Modal
+    {/* <Modal
         open={loginOpen}
         onClose={handleLoginClose}
         aria-labelledby="modal-modal-title"
@@ -76,7 +77,7 @@ const Login = () => {
           </Typography>
           <button onClick={handleLoginClose}>ok</button>
         </Box>
-      </Modal>
+      </Modal> */}
     </>
   )
 }

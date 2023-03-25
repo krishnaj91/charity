@@ -47,13 +47,20 @@
 }
 
 .volunteer-left{
-    background-color: #12284c;
-    color: aliceblue;
+    /* background-color: #12284c; */
+    background-image:linear-gradient(rgba(57, 97, 182, 0.7), rgba(3, 56, 87, 0.7)), url('/src/assets/about/volunteer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
     width: 30%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.volunteer-left h1{
+    text-shadow: 2px 2px 5px white;
 }
 
 .volunteer-right{
@@ -76,6 +83,18 @@
     background-color: aliceblue;
     padding: 30px 10%;
     margin-bottom: 50px;
+    color: gray;
+    font-size: 20px;
+}
+
+.volunteer-about h2{
+    color: rgb(80, 79, 79);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.volunteer-about ul{
+    list-style: none;
 }
 
 .volunteer-cards{
@@ -99,6 +118,7 @@
 .volunteer-card img{
     width: 100%;
     margin-bottom: 15px;
+    height: 200px;
 }
 
 .volunteer-card button{
@@ -117,6 +137,5 @@
     background-color: #12284c;
     color: white;
 }
-
 
 /* background: #234987ba; */

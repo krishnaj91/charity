@@ -43,9 +43,9 @@ const style = {
 
 const Payment = () => {
   // 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => {setOpen(false),navigate('/')};
+  const [paymentBox, setPaymentBox] = React.useState(false);
+  // const handlePaymentBoxOpen = () => setPaymentBox(true);
+  const handlePaymentBoxClose = () => {setPaymentBox(false),navigate('/')};
   // 
   const navigate = useNavigate();
   const amount = localStorage.getItem("amount");
@@ -177,32 +177,32 @@ const Payment = () => {
     if (name === "upi") {
       Validate("upi", upi);
       if (upi.upi) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     } else if (name === "gpay") {
       Validate("gpay", upi);
       if (upi.gpay) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     } else if (name === "phonepe") {
       Validate("phonepe", upi);
       if (upi.phonepe) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     } else if (name === "bhim") {
       Validate("bhim", upi);
       if (upi.bhim) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     } else if (name === "paytm") {
       Validate("paytm", upi);
       if (upi.paytm) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     } else if (name === "amazonUpi") {
       Validate("amazonUpi", upi);
       if (upi.amazonUpi) {
-        setOpen(true)
+        setPaymentBox(true)
       }
     }
   };
@@ -210,7 +210,7 @@ const Payment = () => {
   const handleCreditSubmit = ()=>{
     ValidateCredirCard()
     if(card.bank && card.month && card.name.length>3 && card.number.length>=16 && card.provider){
-      setOpen(true)
+      setPaymentBox(true)
     }
   }
 
@@ -726,6 +726,7 @@ const Payment = () => {
                   onKeyDown={(e) =>
                     exceptThisSymbols.includes(e.key) && e.preventDefault()
                   }
+                  onWheel={(e:any) => e.target.blur()}
                   onChange={(e) =>
                     handleCardChange(
                       "number",
@@ -858,6 +859,7 @@ const Payment = () => {
                 onKeyDown={(e) =>
                   exceptThisSymbols.includes(e.key) && e.preventDefault()
                 }
+                onWheel={(e:any) => e.target.blur()}
                 onChange={(e) =>
                   handleCardChange(
                     "number",
@@ -1182,8 +1184,8 @@ const Payment = () => {
           )}
         </div>
         <Modal
-          open={open}
-          onClose={handleClose}
+          open={paymentBox}
+          onClose={handlePaymentBoxClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >

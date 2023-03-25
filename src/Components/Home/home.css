@@ -59,8 +59,9 @@
 }
 
 .awards-bg{
-  background-color: rgb(30, 3, 70);
-  color: white;
+  /* background-color: rgb(30, 3, 70); */
+  margin-bottom: 35px;
+  color: rgb(30, 3, 70);
 }
 
 .awards-bg > h1{
@@ -89,6 +90,7 @@
 .awards p{
   margin: 10px;
   width: 80%;
+  font-size: 20px;
 }
 
 .awards img{
@@ -112,6 +114,17 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.impact h1{
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.impact p{
+  color: gray;
+  font-size: 16px;
+}
+
 
 .impact div{
   width: 22%;

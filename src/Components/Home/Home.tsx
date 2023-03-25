@@ -1,8 +1,19 @@
 import React from "react";
 import "./home.css";
 import HomeImg from "../../assets/homemain.jpg";
-import { Box, Button, Modal, Typography } from "@mui/material";
-import Demo from "../../assets/bg.jpg";
+import { Box, Button, Modal } from "@mui/material";
+import Slide1 from "../../assets/home/slide1.jpg";
+import Slide2 from "../../assets/home/slide2.jpg";
+import Slide3 from "../../assets/home/slide3.jpg";
+import Slide4 from "../../assets/home/slide4.jpg";
+import Award1 from "../../assets/home/award1.jpg";
+import Award2 from "../../assets/home/award2.jpg";
+import Award3 from "../../assets/home/award3.jpg";
+import Impact1 from "../../assets/home/impact1.jpg";
+import Impact2 from "../../assets/home/impact2.jpg";
+import Impact3 from "../../assets/home/impact3.jpg";
+import Impact4 from "../../assets/home/impact4.jpg";
+
 import { Carousel } from "react-carousel-minimal";
 import Form from "../Form/Form";
 
@@ -23,39 +34,25 @@ const Home = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const data = [
-    { image: [HomeImg] },
-    { image: [HomeImg] },
-    { image: [HomeImg] },
-    { image: [HomeImg] },
-
-    // {
-    //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyufviOAXqhmPCbBElkY2ZXok_N5n0FHQTeBmdV3dGEtHC0pvdTZiQF-XsGuacn96bZsg&usqp=CAU",
-    // },
-    // {
-    //   image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyufviOAXqhmPCbBElkY2ZXok_N5n0FHQTeBmdV3dGEtHC0pvdTZiQF-XsGuacn96bZsg&usqp=CAU",
-    // },
-    // {
-    //   image: "https://media.istockphoto.com/vectors/healthy-lifestyle-and-selfcare-concept-vector-id1208604845?s=170667a",
-    // },
-    // {
-    //   image: "https://wallpaperaccess.com/full/307193.jpg",
-    // }
+    { image: [Slide1] },
+    { image: [Slide2] },
+    { image: [Slide3] },
+    { image: [Slide4] },
   ];
 
   return (
     <div>
       <div className="container-home">
         <div className="left-home">
-          {/* <img src={HomeImg}/> */}
           <Carousel
             data={data}
-            time={4500}
+            time={2500}
             slideNumber={true}
             automatic={true}
             dots={true}
             width="100%"
             slideImageFit="cover"
-            showNavBtn={false}
+            showNavBtn={true}
             slideBackgroundColor="transparent"
             style={{
               backgroundColor: "transparent",
@@ -130,9 +127,8 @@ const Home = () => {
         <h1>Awards</h1>
         <div className="awards">
           <div>
-            <img src={HomeImg} alt="" />
-            <h1>award1</h1>
-            <h2>sub</h2>
+            <img src={Award1} alt="" />
+            <h1>Award 1</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
               aliquam excepturi omnis adipisci eaque, atque quam animi quidem
@@ -142,9 +138,8 @@ const Home = () => {
           </div>
 
           <div>
-            <img src={HomeImg} alt="" />
-            <h1>award1</h1>
-            <h2>sub</h2>
+            <img src={Award2} alt="" />
+            <h1>Award</h1>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
               autem quis quos accusantium aut ea animi perferendis ab non!
@@ -154,9 +149,8 @@ const Home = () => {
           </div>
 
           <div>
-            <img src={HomeImg} alt="" />
-            <h1>award1</h1>
-            <h2>sub</h2>
+            <img src={Award3} alt="" />
+            <h1>Award</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               laudantium nobis ut illo voluptatum labore similique laboriosam
@@ -172,17 +166,18 @@ const Home = () => {
         <h1>Our Impacts</h1>
         <div className="impact">
           <div>
-            <img src={Demo} />
+            <img src={Impact1} />
             <h1>story 1</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis porro autem corporis perferendis. Illum repellat
               Perspiciatis porro autem corporis perferendis. Illum repellat
               quisquam sequi molestias reiciendis blanditiis ullam doloremque
               recusandae at, fuga, voluptate dicta pariatur eligendi quae?
             </p>
           </div>
           <div>
-            <img src={Demo} />
+            <img src={Impact2} />
             <h1>story 2</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -192,7 +187,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src={Demo} />
+            <img src={Impact3} />
             <h1>story 3</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -202,7 +197,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src={Demo} />
+            <img src={Impact4} />
             <h1>story 4</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

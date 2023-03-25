@@ -9,9 +9,11 @@ import Admin from '../Components/Admin/Admin';
 import Contact from '../Components/Contact/Contact';
 import Donate from '../Components/Donate/Donate';
 import Home from '../Components/Home/Home';
+import Kyc from '../Components/Kyc/Kyc';
 import Login from '../Components/Login/Login';
 import Navbar from '../Components/Navbar/Navbar';
 import Payment from '../Components/Payments/Payment';
+import Register from '../Components/Register/Register';
 
 const Router = () => {
   return (
@@ -29,6 +31,8 @@ const Router = () => {
             <Route path='/about-health' element={<Health/>}/>
             <Route path='/about-shelter' element={<Shelter/>}/>
             <Route path='/about-welfare' element={<Welfare/>}/>
+            <Route path='/register' element={<Register/>}/>
+            <Route path='kyc' element={<Kyc/>}/>
         </Routes>
     </>
   )

@@ -2,6 +2,13 @@ import React from "react";
 import "./about.css";
 import Card from "../../assets/bg.jpg";
 import { useNavigate } from "react-router-dom";
+import Card1 from '../../assets/about/card1.jpg';
+import Card2 from '../../assets/about/card2.jpg';
+import Card3 from '../../assets/about/card3.jpg';
+import Card4 from '../../assets/about/card4.jpg';
+import Volunteer1 from '../../assets/about/volunteer1.jpg';
+import Volunteer2 from '../../assets/about/volunteer2.jpg';
+import Volunteer3 from '../../assets/about/volunteer3.jpg';
 
 const About = () => {
   const navigate = useNavigate();
@@ -14,11 +21,11 @@ const About = () => {
           onClick={() => navigate("/about-education")}
         >
           <div>
-            <img src={Card} className="img-about" />
+            <img src={Card1} className="img-about" />
           </div>
           <div>
             <h1 className="card-title">
-              CHILDREN <span>EDUCATION</span>
+              CHILDREN EDUCATION
             </h1>
             <p className="card-para">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente
@@ -30,7 +37,7 @@ const About = () => {
 
         <div className="card-about" onClick={() => navigate("/about-health")}>
           <div>
-            <img src={Card} className="img-about" />
+            <img src={Card2} className="img-about" />
           </div>
           <div>
             <h1 className="card-title">CHILDREN HEALTH</h1>
@@ -44,7 +51,7 @@ const About = () => {
 
         <div className="card-about" onClick={() => navigate("/about-shelter")}>
           <div>
-            <img src={Card} className="img-about" />
+            <img src={Card3} className="img-about" />
           </div>
           <div>
             <h1 className="card-title">CHILDREN SHELTER</h1>
@@ -58,7 +65,7 @@ const About = () => {
 
         <div className="card-about" onClick={() => navigate("/about-welfare")}>
           <div>
-            <img src={Card} className="img-about" />
+            <img src={Card4} className="img-about" />
           </div>
           <div>
             <h1 className="card-title">CHILDREN WELFARE</h1>
@@ -106,23 +113,23 @@ const About = () => {
         </p>
         <ul>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+            - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
             quas
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+            - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
             quas
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+            - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
             quas
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+            - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
             quas
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+            - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
             quas
           </li>
         </ul>
@@ -136,19 +143,19 @@ const About = () => {
       <h1 className="volunteer-title">What Our Volunteers do in common?</h1>
       <div className="volunteer-cards">
         <div className="volunteer-card">
-          <img src={Card} />
+          <img src={Volunteer1} />
           <h1>They are motivated by helping others</h1>
           <center><button>Read More</button></center>
         </div>
 
         <div className="volunteer-card">
-          <img src={Card} />
+          <img src={Volunteer2} />
           <h1>They are local</h1>
           <center><button>Read More</button></center>
         </div>
 
         <div className="volunteer-card">
-          <img src={Card} />
+          <img src={Volunteer3} />
           <h1>They are diverse</h1>
           <center><button>Read More</button></center>
         </div>
