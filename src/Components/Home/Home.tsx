@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./home.css";
-import HomeImg from "../../assets/homemain.jpg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Box, Button, Modal } from "@mui/material";
-import Slide1 from "../../assets/home/slide1.jpg";
-import Slide2 from "../../assets/home/slide2.jpg";
-import Slide3 from "../../assets/home/slide3.jpg";
-import Slide4 from "../../assets/home/slide4.jpg";
+import Slide1 from "../../assets/home/slide1.avif";
+import Slide2 from "../../assets/home/slide2.avif";
+import Slide3 from "../../assets/home/slide3.avif";
+import Slide4 from "../../assets/home/slide4.avif";
+import Slide5 from "../../assets/home/slide5.avif";
 import Award1 from "../../assets/home/award1.jpg";
 import Award2 from "../../assets/home/award2.jpg";
 import Award3 from "../../assets/home/award3.jpg";
@@ -38,7 +40,16 @@ const Home = () => {
     { image: [Slide2] },
     { image: [Slide3] },
     { image: [Slide4] },
+    { image: [Slide5] }
   ];
+
+  useEffect(()=>{
+    AOS.init({
+      delay: 100,
+      once: true,
+      duration: 2000
+    })
+  })
 
   return (
     <div>
@@ -126,7 +137,7 @@ const Home = () => {
       <div className="awards-bg">
         <h1>Awards</h1>
         <div className="awards">
-          <div>
+          <div data-aos="fade-down">
             <img src={Award1} alt="" />
             <h1>Award 1</h1>
             <p>
@@ -137,7 +148,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-down">
             <img src={Award2} alt="" />
             <h1>Award</h1>
             <p>
@@ -148,7 +159,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-down">
             <img src={Award3} alt="" />
             <h1>Award</h1>
             <p>
@@ -165,7 +176,7 @@ const Home = () => {
       <div className="impact-bg">
         <h1>Our Impacts</h1>
         <div className="impact">
-          <div>
+          <div data-aos="fade-right">
             <img src={Impact1} />
             <h1>story 1</h1>
             <p>
@@ -176,7 +187,7 @@ const Home = () => {
               recusandae at, fuga, voluptate dicta pariatur eligendi quae?
             </p>
           </div>
-          <div>
+          <div  data-aos="zoom-in">
             <img src={Impact2} />
             <h1>story 2</h1>
             <p>
@@ -186,7 +197,7 @@ const Home = () => {
               recusandae at, fuga, voluptate dicta pariatur eligendi quae?
             </p>
           </div>
-          <div>
+          <div  data-aos="zoom-in">
             <img src={Impact3} />
             <h1>story 3</h1>
             <p>
@@ -196,7 +207,7 @@ const Home = () => {
               recusandae at, fuga, voluptate dicta pariatur eligendi quae?
             </p>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <img src={Impact4} />
             <h1>story 4</h1>
             <p>
@@ -210,7 +221,7 @@ const Home = () => {
       </div>
 
       {/*  */}
-      <div className="home-flex">
+      <div className="home-flex"  data-aos="flip-left">
         <div className="home-card">
           <img
             className="home-img"
@@ -225,7 +236,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="home-card">
+        <div className="home-card"  data-aos="flip-down">
           <img
             className="home-img"
             src="https://www.unitedwayhyderabad.org/images/ourvision_mission_img2.png"
@@ -234,10 +245,10 @@ const Home = () => {
           <h3>OUR MISSION</h3>
           <p>
             Improve lives by mobilizing the caring power of the communities to
-            create long-term social change and advance towards common good.
+            create long-term social change and to advance towards common good.
           </p>
         </div>
-        <div className="home-card">
+        <div className="home-card"  data-aos="flip-right">
           <img
             className="home-img"
             src="https://www.unitedwayhyderabad.org/images/ourvision_mission_img3.png"

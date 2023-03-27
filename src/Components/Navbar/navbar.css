@@ -1,5 +1,6 @@
 .container-nav{
-    display: flex;
+  font-family:'Pacifico', cursive;
+  display: flex;
     justify-content: center;
     align-items: center;
 }

@@ -1,118 +1,136 @@
-.kyc-container{
-    background-color: white;
-    width:50%;
-    border: 2px solid red;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    padding: 50px 0;
+.kyc-container {
+  font-family: "Pacifico", cursive;
+  background-color: white;
+  width: 50%;
+  min-height: 450px;
+  border: 5px solid whitesmoke;
+  box-shadow: 12px 12px 22px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 50px;
+  padding: 20px 0;
 }
 
-.kyc-header{
-    display: flex ;
-    width: 80%;
-    margin-bottom: 40px;
-    cursor: pointer;
-}
-
-.kyc-header p:nth-child(1){
-    background-color: grey;
-    padding: 5px 30px;
-    width: 25%;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.kyc-header p:nth-child(2){
-    background-color: grey;
-    padding: 5px 30px;
-    width: 25%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.kyc-header p:nth-child(3){
-    background-color: grey;
-    padding: 5px 30px;
-    width: 25%;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.kyc-header p:nth-child(n):hover{
-    color: rgb(199, 66, 66);
-    border-left: 2px solid red;
-    border-right: 2px solid red;
-    background-color: rgb(123, 201, 20);
-}
-
-.kyc-header-active{
-    background-color:rgb(10, 115, 202)  !important; 
-    color: whitesmoke;
-}
-
-.kyc-body-container{
-    width: 80%;
-}
-
-.kyc-body-container input{
-    width: 100%;
-    margin: 20px 0;
-}
-
-.kyc-body-container button{
-    width: 100%;
-}
-.kyc-preview-btn{
-    margin-top: 50px;
-    display: flex;
-    gap: 50px;
-}
-.kyc-body{
-    background-color: black;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.kyc-body img{
-    width: 70%;
-    height: 80%;
-    border-radius: 15px;
-}
-
-.id-title{
-    color: yellowgreen;
-    font-size: 20px;
-}
-
-.kyc-id{
-    width: 50%;
-    overflow: hidden;
-    padding: 5px;
-}
-.kyc-id input{
-    width: 98%;
-    position: relative;
-    padding-left: 2%;
-    height: 30px;
-    /* padding: 5px 20px; */
-    background: transparent;
-    font-size: 20px;
-    /* outline:navajowhite; */
-    outline-color: blueviolet;
-}
-.kyc-id p{
-    width: 98%;
-    text-align: right;
-    color: grey;
-    font-size: 10px;
-}
-.kyc-id span{
+.err{
     color: red;
-    position: absolute;
-    display: block;
+}
+
+.form input{
+    height: 50px;
+    width: 96%;
+    font-size: 20px;
+    outline: none;
+    padding:0 2%
+}
+
+.kyc-header {
+  font-family: "Pacifico", cursive;
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.kyc-header p:nth-child(1) {
+  background-color: grey;
+  padding: 10px 30px;
+  width: 25%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.kyc-header p:nth-child(2) {
+  background-color: grey;
+  padding: 10px 30px;
+  width: 25%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.kyc-header p:nth-child(3) {
+  background-color: grey;
+  padding: 10px 30px;
+  width: 25%;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.kyc-header p:nth-child(n):hover {
+  background-color: rgb(104, 233, 238);
+}
+
+.kyc-header-active {
+  background-color: rgb(10, 115, 202) !important;
+  color: whitesmoke;
+}
+
+.kyc-body-container {
+  width: 80%;
+}
+
+.kyc-body-container h1{
+   text-align: left;
+   margin-bottom: 20px;
+  }
+
+.kyc-body-container input {
+  width: 96%;
+  margin: 20px 0;
+}
+
+.kyc-body-container button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.kyc-preview-btn {
+  margin-top: 50px;
+  display: flex;
+  gap: 50px;
+}
+.kyc-body {
+  background-color: black;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kyc-body img {
+  width: 70%;
+  height: 80%;
+  border-radius: 15px;
+}
+
+.id-title {
+    margin-top: 30px;
+  font-size: 25px;
+}
+
+.kyc-id {
+  width: 50%;
+  overflow: hidden;
+  padding: 5px;
+}
+.kyc-id input {
+  width: 98%;
+  position: relative;
+  padding-left: 2%;
+    margin-top: 30px;
+    height: 50px;
+  /* padding: 5px 20px; */
+  background: transparent;
+  font-size: 20px;
+  /* outline:navajowhite; */
+  outline-color: blueviolet;
+}
+.id-info {
+  width: 98%;
+  text-align: right;
+  color: grey;
+  font-size: 10px;
 }

@@ -1,0 +1,21 @@
+.help-icon {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+  color: white;
+  background-color: rgb(31, 31, 240);
+  padding: 1%;
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.help-card{
+  position: fixed;
+  height: 200px;
+  right: 5vw;
+  bottom: 15vh;
+  z-index: 1;
+  width: 200px;
+  background-color: black;
+}

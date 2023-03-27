@@ -1,77 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./donate.css";
-import Demo from "../../assets/bg.jpg";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import DonateImg from '../../assets/donate/donate.avif'
+import Onetime from '../../assets/donate/onetime.avif'
+import Monthly from '../../assets/donate/mounthly.avif'
 import Form from "../Form/Form";
 
 const Donate = () => {
   const [option,setOption] = useState('')
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   email: "",
-  //   mobile: "",
-  //   amount: "",
-  // });
 
-  // const [formError, setFormError] = useState({
-  //   name: "",
-  //   email: "",
-  //   mobile: "",
-  //   amount: "",
-  // });
-
-  const navigate = useNavigate();
-
-  // const handleChange = (name: any, value: any) => {
-  //   setForm((preValue: any) => ({ ...preValue, [name]: value }));
-  //   setFormError((preValue: any) => ({ ...preValue, [name]: "" }));
-  // };
-
-  // const Validate = () => {
-  //   const emailRegx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-  //   const tempObj = { ...formError };
-  //   if (form.name === "") {
-  //     tempObj.name = "Please enter your name";
-  //   }
-  //   else if(form.name.length<=2){
-  //     tempObj.name = "Invalid name";
-  //   }else{
-  //     tempObj.name = "";
-  //   }
-
-  //   if (form.email === "") {
-  //     tempObj.email = "Please enter your email";
-  //   }
-  //   else if (!emailRegx.test(form.email)) {
-  //     tempObj.email = "Invalid Email address";
-  //   }else{
-  //     tempObj.email = "";
-  //   }
-
-  //   if (form.mobile === "") {
-  //     tempObj.mobile = "Please enter your mobile number";
-  //   }
-  //   else if(form.mobile.length<10){
-  //     tempObj.mobile = "Invalid mobile number";
-  //   }
-  //   if (form.amount === "") {
-  //     tempObj.amount = "Please enter a amount";
-  //   }
-  //   setFormError(tempObj);
-  // };
-
-  // const handleSubmit = () => {
-  //   Validate();
-  //   if(form.amount){
-  //     navigate('/payment')
-  //     localStorage.setItem('amount',form.amount)
-  //   }
-  // };
+  useEffect(()=>{
+    AOS.init({
+      delay: 50,
+      once: true
+    })
+  })
+  
   return (
     <div className="container-donate">
-      <div className="left-donate">
+      <div className="left-donate" data-aos="zoom-out">
         <div className="info">
           <h1>
             Every donation provides help for childrens
@@ -96,7 +44,7 @@ const Donate = () => {
           </h2>
         </div>
       </div>
-      <div className="right-donate">
+      <div className="right-donate" data-aos="zoom-out">
         <div className="donate">
           <div>
             <h1 className="donate-tittle">You are about to Donate</h1>
@@ -110,71 +58,22 @@ const Donate = () => {
             </div>
           </div>
           <div>
-            {!option && <img className="donate-imgs" src={Demo} />}
-            {option==='one-time' && <img className="donate-imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY4j3t9KA75p7e9Up0dczLSk5QdkZq3ls7uA&usqp=CAU" />}
-            {option==='monthly' && <img className="donate-imgs" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5gSNI-UZr4nqf_fkjacQE4xg9bULnPxjyiQ&usqp=CAU" />}
+            {!option && <img className="donate-imgs" src={DonateImg} />}
+            {option==='one-time' && <img className="donate-imgs" src={Onetime} data-aos="zoom-in"/>}
+            {option==='monthly' && <img className="donate-imgs" src={Monthly} data-aos="zoom-in"/>}
           </div>
           <div className="donate-styled-text">
-            <h3>enough to provide food for two people each month</h3>
+            {!option && <h3>Make children happy</h3>}
+            {option==='one-time' && <h3>Give a simle on a face</h3>}
+            {option==='monthly' && <h3>Enough to provide food for two people each month</h3>}
           </div>
           <hr />
           <div className="donate-payment">
             <h2 className="donate-tittle">YOUR CONTACT DETAILS</h2>
-            {/* <div>
-              <h2>Name:</h2>
-              <TextField
-                value={form.name}
-                onChange={(e: any) => {
-                  handleChange("name", e.target.value.toString().slice(0, 15).replace(/[^a-z]/gi,''));
-                }}
-                className="field"
-                placeholder="Name"
-                variant="outlined"
-              />
-              <p className="err">{formError.name}</p>
-              <h2>Email:</h2>
-              <TextField
-                value={form.email}
-                onChange={(e: any) => {
-                  handleChange("email", e.target.value);
-                }}
-                className="field"
-                placeholder="Email"
-                variant="outlined"
-              />
-              <p className="err">{formError.email}</p>
-              <h2>Mobile number:</h2>
-              <TextField
-                value={form.mobile}
-                onChange={(e: any) => {
-                  handleChange("mobile", e.target.value.toString().slice(0, 10));
-                }}
-                onWheel={(e:any) => e.target.blur()}
-                className="field"
-                placeholder="Mobile Number"
-                variant="outlined"
-                type="number"
-              />
-              <p className="err">{formError.mobile}</p>
-              <h2>Amount:</h2>
-              <TextField
-                value={form.amount}
-                onChange={(e: any) => {
-                  handleChange("amount", e.target.value.toString().slice(0, 6));
-                }}
-                onWheel={(e:any) => e.target.blur()}
-                type='number'
-                className="field"
-                placeholder="Amount"
-                variant="outlined"
-              />
-              <p className="err">{formError.amount}</p>
-              <Button variant="contained" onClick={handleSubmit}>Pay</Button>
-            </div> */}
             <Form/>
           </div>
           <div className="donate-info">
-            <p>
+            <p data-aos="zoom-in">
               By providing your phone number you agree that ___ will use the
               personal information you share with us to send you information
               about our programs, services and events by SMS, telephone (voice)
@@ -187,8 +86,8 @@ const Donate = () => {
               communications at any time by emailing supportercare@___.org.
             </p>
           </div>
-          <div className="donate-end">
-            <p>
+          <div className="donate-end" data-aos="fade-up"  data-aos-delay="500">
+            <p data-aos="zoom-in"  data-aos-delay="1000">
               The Charity Programme is a 100% voluntarily funded organization.
               For every $1 you give, 64 cents goes directly to programmes
               supporting hungry people. Right now, 2 cents is used to process
