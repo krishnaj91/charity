@@ -12,7 +12,6 @@ const Donate = () => {
 
   useEffect(()=>{
     AOS.init({
-      delay: 50,
       once: true
     })
   })

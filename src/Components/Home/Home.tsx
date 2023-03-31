@@ -244,8 +244,8 @@ const Home = () => {
 
           <h3>OUR MISSION</h3>
           <p>
-            Improve lives by mobilizing the caring power of the communities to
-            create long-term social change and to advance towards common good.
+            Improve lives by mobilizing the caring power of communities to
+            create long-term social change and advance towards common good.
           </p>
         </div>
         <div className="home-card"  data-aos="flip-right">

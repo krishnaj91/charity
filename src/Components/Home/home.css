@@ -31,12 +31,10 @@
   -webkit-text-stroke: 1px black;
   font-size: 40px;
   margin-bottom: 5px;
-  font-family: cursive !important;
 }
 
 .right-home p{
   font-size: 20px;
-  font-family:'Pacifico', cursive;
   margin: 15px 0;
 }
 
@@ -46,18 +44,15 @@
 }
 
 .home-info h2{
-  font-family:'Pacifico', cursive;
   margin-bottom: 20px;
 }
 
 .home-info p{
   margin-bottom: 20px;
-  font-family:'Pacifico', cursive;
   font-size: 18px;
 }
 
 .awards-bg{
-  font-family:'Pacifico', cursive;
   margin-bottom: 35px;
   color: rgb(30, 3, 70);
 }
@@ -96,10 +91,10 @@
   height: 200px;
   width: 80%;
   border: 3px solid whitesmoke;
+  overflow: hidden;
 }
 
 .impact-bg{
-  font-family:'Pacifico', cursive;
   background-color: azure;
   padding: 20px;
   margin-bottom: 20px;
@@ -142,11 +137,11 @@
     justify-content: center;
   }
 
-  .home-img{
-    height: 150px;
-    width: 150px;
-    margin-bottom: 30px;
-  }
+.home-img{
+  height: 150px;
+  width: 150px;
+  margin-bottom: 30px;
+}
 
   .home-card{
     border: solid whitesmoke;
@@ -159,6 +154,7 @@
     margin-bottom: 35px;
     text-align: center;
     line-height: 30px;
+    overflow: hidden;
   }
 
   .home-card h3{

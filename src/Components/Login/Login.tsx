@@ -91,13 +91,13 @@ const Login = () => {
               className="inpt"
               type="text"
               placeholder="username"
-              value="Admin@123"
+              // value="Admin@123"
             />
             <input
               className="inpt"
               type="password"
               placeholder="password"
-              value="admin123"
+              // value="admin123"
             />
             <Button
               variant="contained"

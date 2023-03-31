@@ -1,5 +1,4 @@
 .container-about{
-  font-family:'Pacifico', cursive;
   display: flex;
     justify-content: space-evenly;
 }
@@ -24,7 +23,6 @@
 .card-title{
     color: gray;
     font-size: 20px;
-    font-family:'Pacifico', cursive;
     text-align: center;
     margin: 10px 0;
 }
@@ -37,7 +35,6 @@
 
 
 .volunteer{  
-  font-family:'Pacifico', cursive;
   display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -76,7 +73,6 @@
 
 .volunteer-title{
     background-color: #12284c;
-    font-family:'Pacifico', cursive;
     text-align: center;
     color: aliceblue;
     font-weight: 900;
@@ -84,7 +80,6 @@
 }
 
 .volunteer-about{
-  font-family:'Pacifico', cursive;
   background-color: aliceblue;
     padding: 30px 10%;
     margin-bottom: 50px;
@@ -103,7 +98,6 @@
 }
 
 .volunteer-cards{
-  font-family:'Pacifico', cursive;
   display: flex;
     overflow: hidden;
     width: 100%;

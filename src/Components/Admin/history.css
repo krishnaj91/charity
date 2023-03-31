@@ -14,7 +14,21 @@
 .categories{
     background-color: #fff;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+.categories ul{
+    display: flex;
+    list-style: none;
+}
+
+.categories li{
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    margin: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .category{
@@ -25,6 +39,6 @@
     font-size: 12px;
 }
 
-.user-data{
+/* .user-data{
     background-color: rgb(63, 102, 102);
-}
+} */
