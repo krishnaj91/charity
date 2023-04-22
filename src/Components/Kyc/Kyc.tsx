@@ -6,6 +6,7 @@ import Panfront from "../../assets/kyc/panfront.jpg";
 import Panback from "../../assets/kyc/panback.jpg";
 import Aadharfront from "../../assets/kyc/aadharfront.jpg";
 import Aadharback from "../../assets/kyc/aadharback.jpg";
+import Sample from "../../assets/kyc/sample.jpg";
 import Selfie from "../../assets/kyc/selfie.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -315,6 +316,8 @@ const Kyc = () => {
             <Button variant="contained" onClick={() => handleSubmit("pan")}>
               SUBMIT
             </Button>
+            <p className="auto" onClick={()=>setPan({pan:'ffdit5549h',dob:'20/11/1995'})}>Auto fill</p>
+            <p style={{textAlign:"left"}}><a href="#" onClick={()=>setStep('congo')}>Skip For Now</a></p>
           </div>
         )}
 
@@ -332,6 +335,7 @@ const Kyc = () => {
             >
               CONTINUE
             </Button>
+            <p className="auto" onClick={()=>setPanFront(Sample)}>Auto fill</p>
           </div>
         )}
 
@@ -349,6 +353,7 @@ const Kyc = () => {
             >
               CONTINUE
             </Button>
+            <p className="auto" onClick={()=>setPanBack(Sample)}>Auto fill</p>
           </div>
         )}
 
@@ -405,6 +410,7 @@ const Kyc = () => {
             <Button variant="contained" onClick={() => handleSubmit("aadhar")}>
               SUBMIT
             </Button>
+            <p className="auto" onClick={()=>setAadhar("9485 7345 6723")}>Auto fill</p>
           </div>
         )}
 
@@ -422,6 +428,7 @@ const Kyc = () => {
             >
               CONTINUE
             </Button>
+            <p className="auto" onClick={()=>setAadharFront(Sample)}>Auto fill</p>
           </div>
         )}
 
@@ -439,6 +446,7 @@ const Kyc = () => {
             >
               CONTINUE
             </Button>
+            <p className="auto" onClick={()=>setAadharBack(Sample)}>Auto fill</p>
           </div>
         )}
 
@@ -493,6 +501,7 @@ const Kyc = () => {
             <Button variant="contained" onClick={() => handleSubmit("selfie")}>
               SUBMIT PHOTO
             </Button>
+            <p className="auto" onClick={()=>setSelfie(Sample)}>Auto fill</p>
           </div>
         )}
 
@@ -524,6 +533,7 @@ const Kyc = () => {
               <Button onClick={handleIdSubmit} variant="contained">
                 SUBMIT
               </Button>
+              <p className="auto" onClick={()=>{setId({username:'sample12',password:'sample@12'}),setIdError({username:'',password:''})}}>Auto Fill</p>
             </div>
           </>
         )}

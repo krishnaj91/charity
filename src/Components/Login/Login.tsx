@@ -78,6 +78,7 @@ const Login = () => {
             <span>
               New user click here to <Link to={"/register"}>Register</Link>
             </span>
+            <p className="auto" onClick={()=>{setVol({username:"sample12",password:"sample@12"}),setVolError({username:"",password:""})}}>Auto Fill</p>
           </div>
         </div>
         <div className="line"  data-aos="zoom-in"></div>

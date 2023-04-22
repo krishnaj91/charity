@@ -24,8 +24,8 @@
 
 .categories li{
     padding: 10px 20px;
-    background-color: black;
-    color: #fff;
+    background-color: gray;
+    color: #f7f3f3;
     margin: 5px 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -39,6 +39,27 @@
     font-size: 12px;
 }
 
-/* .user-data{
-    background-color: rgb(63, 102, 102);
-} */
+.table-history{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #ece0e0;
+    overflow: auto;
+}
+
+.col-red{
+    color: red;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.col-green{
+    font-weight: bolder;
+    color: green;
+    text-transform: uppercase;
+}
+
+.payment-active{
+    background-color: #db7272 !important;
+    color: black !important;
+}

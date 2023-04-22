@@ -50,7 +50,7 @@ const Feed = () => {
         {/* home */}
         {feedActive === "home" && (
           <div>
-            <h1>welcome to events</h1>
+            <h1 className="txt-center">welcome to events</h1>
           </div>
         )}
         {/* new event */}

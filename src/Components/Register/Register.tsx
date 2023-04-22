@@ -17,7 +17,7 @@ const Register = () => {
     mobile: "",
     email: "",
     city: "",
-    check: "",
+    // check: "",
   });
   const [check, setCheck] = useState(false);
   const [checkError, setCheckError] = useState(false);
@@ -58,14 +58,11 @@ const Register = () => {
   };
 
   const handleSubmit = () => {
-    // Validate();
-    // if(form.name.length>=3 && form.mobile.length===10 && form.email && form.city.length>=3 && check===true){
-    //   navigate('/kyc')
-    // localStorage.setItem('v-name',form.name)
-    // }
+    Validate();
+    if(form.name.length>=3 && form.mobile.length===10 && form.email && form.city.length>=3 && check===true){
       navigate('/kyc')
     localStorage.setItem('v-name',form.name)
-
+    }
   };
   return (
     <div className="register-main">
@@ -125,6 +122,8 @@ const Register = () => {
           REGISTER
         </Button>
       </div>
+      {/* auto */}
+      <p className="auto" onClick={()=>{setForm({name:'krishna',mobile:'9098786547',email:'krishna@gmail.com',city:'hyderabad'}),setCheck(true),setCheckError(false),setFormError({name:'',mobile:'',email:'',city:''})}}>AUTO FILL</p>
     </div>
   );
 };

@@ -43,6 +43,7 @@
 .admin-right-center{
     display: flex;
     justify-content: center;
+    overflow-x: auto;
 }
 
 .text-center{
@@ -183,4 +184,8 @@
     width: 30%;
     margin-bottom: 20px;
     align-self: center;
+}
+
+.txt-center{
+    text-align: center;
 }

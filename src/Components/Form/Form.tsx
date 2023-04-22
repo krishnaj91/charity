@@ -118,6 +118,7 @@ const Form = () => {
     <center>
       <Button variant="contained" onClick={handleSubmit}>Pay</Button>
     </center>
+    <p className='auto' onClick={()=>{setForm({name:'krishna',email:'krishna@gmail.com',mobile:'9987875867',amount:'100'}),setFormError({name:'',email:'',mobile:'',amount:''})}}>Auto Fill</p>
   </div>
   )
 }

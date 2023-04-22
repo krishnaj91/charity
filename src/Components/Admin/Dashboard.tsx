@@ -38,8 +38,6 @@ const Dashboard = () => {
     setUser(UserData);
     setVolunteer(VolunteerData);
     setCallback(CallbackData);
-    console.log(kycDetail);
-    console.log(kycDetail.length > 0 && kycDetail[0].pan);
   });
   return (
     <>
@@ -50,15 +48,15 @@ const Dashboard = () => {
             <li onClick={()=>setDashboardActive('user-data')} className={dashboardActive==='user-data'?'admin-dashboard-left-active':''}>USER DATA</li>
             <li onClick={()=>setDashboardActive('volunteer-data')} className={dashboardActive==='volunteer-data'?'admin-dashboard-left-active':''}>VOLUNTEER DATA</li>
             <li onClick={()=>setDashboardActive('callback')} className={dashboardActive==='callback'?'admin-dashboard-left-active':''}>CALLBACK DATA</li>
-            <li onClick={()=>setDashboardActive('charts')} className={dashboardActive==='charts'?'admin-dashboard-left-active':''}>CHARTS</li>
-            <li onClick={()=>setDashboardActive('graphs')} className={dashboardActive==='graphs'?'admin-dashboard-left-active':''}>GRAPHS</li>
+            {/* <li onClick={()=>setDashboardActive('charts')} className={dashboardActive==='charts'?'admin-dashboard-left-active':''}>CHARTS</li>
+            <li onClick={()=>setDashboardActive('graphs')} className={dashboardActive==='graphs'?'admin-dashboard-left-active':''}>GRAPHS</li> */}
           </ul>
         </div>
         <div className="admin-dashboard-right">
           {/* home */}
           {dashboardActive==='home' &&(
             <div>
-              <h1>welcome admin</h1>
+              <h1 className="txt-center">welcome admin</h1>
             </div>
           )}
           {/* user data */}
@@ -69,7 +67,6 @@ const Dashboard = () => {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th>s.no</th>
                       <th>name</th>
                       <th>email</th>
                       <th>mobile</th>
@@ -81,7 +78,6 @@ const Dashboard = () => {
                       user.map((data: any) => {
                         return (
                           <tr key={data.id}>
-                            <td>{data.id}</td>
                             <td>{data.name}</td>
                             <td>{data.email}</td>
                             <td>{data.mobile}</td>

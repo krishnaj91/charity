@@ -134,3 +134,10 @@
   color: grey;
   font-size: 10px;
 }
+
+.auto{
+  text-align: right;
+  margin-top: 15px;
+  cursor: pointer;
+  color: #1a88f7;
+}

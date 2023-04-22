@@ -10,17 +10,10 @@
   cursor: pointer;
 }
 
-/* .help-icon:hover{
-  background-color: green;
-} */
-
 .help-icon-active{
   background-color: green;
 }
 
-/* .help-icon-active:hover{
-  background-color: rgb(31, 31, 240);
-} */
 .help-card{
   position: fixed;
   border-radius: 0 30px;
@@ -30,7 +23,8 @@
   bottom: 15vh;
   z-index: 1;
   padding: 10px 30px;
-  background-color: rgb(185, 243, 224);
+  background-color: #22313f;
+  color: #e4f1fe;
 }
 
 .help-card:hover{
@@ -52,20 +46,22 @@
 }
 
 .help-btn-div button{
-  width: 20%;
+  min-width: 20%;
   font-size: 15px;
+  color: #e4f1fe;
   border: none;
-  padding: 10px 0;
+  background-color: #34495e;
+  padding: 10px 10px;
   cursor: pointer;
   border-radius: 20px;
-  border: 1px solid transparent;
+}
 
+.help-btn-ative{
+  background: #8dc6ff !important;
+  color: #22313f !important;
 }
 
 .help-btn-div button:hover{
-  background: transparent;
-  border: 1px solid green;
-  color: red;
-  box-shadow: 0 0 20px rgb(19, 231, 161);
-  transform: scale(1.1);
+  background: #8dc6ff;
+  color: #22313f;
 }
